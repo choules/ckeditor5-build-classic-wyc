@@ -32,6 +32,8 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 // Customisation
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
+import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -64,12 +66,17 @@ ClassicEditor.builtinPlugins = [
 // Adding more plugins
 ClassicEditor.builtinPlugins.push( IndentBlock );
 ClassicEditor.builtinPlugins.push( ImageResize );
+ClassicEditor.builtinPlugins.push( FontFamily );
+ClassicEditor.builtinPlugins.push( FontColor );
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
 			'heading',
+			'|',
+			'fontFamily',
+			'fontColor',
 			'|',
 			'bold',
 			'italic',
