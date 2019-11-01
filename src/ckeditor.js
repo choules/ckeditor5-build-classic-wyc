@@ -30,6 +30,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
 // Customisation
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
@@ -64,6 +65,7 @@ ClassicEditor.builtinPlugins = [
 ];
 
 // Adding more plugins
+ClassicEditor.builtinPlugins.push( Underline );
 ClassicEditor.builtinPlugins.push( IndentBlock );
 ClassicEditor.builtinPlugins.push( ImageResize );
 ClassicEditor.builtinPlugins.push( FontFamily );
@@ -80,6 +82,7 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'bold',
 			'italic',
+			'underline',
 			'link',
 			'bulletedList',
 			'numberedList',
